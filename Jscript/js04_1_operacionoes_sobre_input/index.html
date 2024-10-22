@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Operaciones sobre input</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #d89b9b;
+            color: #df2626;
+            text-align: ;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #a72525;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            border: 2px solid #ad1457;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            width: 150px;
+        }
+
+        button {
+            background-color: #8b2626;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #df3232;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Introducir un valor en el cuadro de texto y luego probar los botones.</h1>
+
+    <input type="text" id="caja" placeholder="Introduce un valor">
+
+    <br><br>
+
+    <button id="muestraValor">Mostrar Valor</button>
+    <button id="suma">Sumar 1</button>
+    <button id="elevadoCuadrado">Elevar al Cuadrado</button>
+    <button id="multiplica">Multiplicar por 2</button>
+    <button id="elevadoEquis">2 elevado a x</button>
+
+    <script>
+
+        document.getElementById("muestraValor").addEventListener('click', function () {
+            alert(document.getElementById("caja").value);
+        });
+
+        document.getElementById("suma").addEventListener('click', function () {
+            let valor = parseInt(document.getElementById("caja").value);
+            document.getElementById("caja").value = valor + 1;
+        });
+
+        document.getElementById("elevadoCuadrado").addEventListener('click', function () {
+            let valor = parseInt(document.getElementById("caja").value);
+            document.getElementById("caja").value = Math.pow(valor, 2);
+        });
+
+        document.getElementById("multiplica").addEventListener('click', function () {
+            let valor = parseInt(document.getElementById("caja").value);
+            document.getElementById("caja").value = valor * 2;
+        });
+
+        document.getElementById("elevadoEquis").addEventListener('click', function () {
+            let valor = parseInt(document.getElementById("caja").value);
+            document.getElementById("caja").value = Math.pow(2, valor);
+        });
+
+    </script>
+
+</body>
+
+</html>

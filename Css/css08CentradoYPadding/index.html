@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Padding y Box-sizing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            text-align: left; /* Cambiar a 'left' para alinear a la izquierda */
+            font-size: 4.37em; /* Aumentar tamaño del título */
+            padding-top: 20px; /* Agregar espacio entre el título y el borde superior */
+            padding-left: 0; /* Asegurarse de que no hay padding a la izquierda */
+        }
+
+        .contenedor {
+            width: 50%;
+            margin: 0; /* Sin espacio entre divs */
+            text-align: left;
+        }
+
+        .contenedor1,
+        .contenedor2,
+        .contenedor3 {
+            font-size: 2em; /* Aumentar tamaño del texto en los contenedores */
+        }
+
+        .contenedor1 {
+            background-color: green;
+        }
+
+        .contenedor2 {
+            background-color: orange;
+            padding: 0 190px; /* Padding solo a los lados, no afecta el tamaño */
+            box-sizing: content-box; /* Asegura que el padding va hacia afuera */
+        }
+
+        .contenedor3 {
+            background-color: red;
+            padding: 0 190px;
+            box-sizing: border-box; /* Mantiene el padding dentro del contenedor */
+        }
+
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Los siguientes elementos tienen un ancho del 50% de la ventana</h1>
+
+    <div class="contenedor contenedor1">
+        <ul>
+            <li>Texto en interior</li>
+            <li>Texto en interior</li>
+            <li>Texto en interior</li>
+            <li>Texto en interior</li>
+            <li>Texto en interior</li>
+            <li>Texto en interior</li>
+        </ul>
+    </div>
+
+    <div class="contenedor contenedor2">
+        <ul>
+            <li>Texto en interior con padding y sin box_sizing</li>
+            <li>Texto en interior con padding y sin box_sizing</li>
+            <li>Texto en interior con padding y sin box_sizing</li>
+            <li>Texto en interior con padding y sin box_sizing</li>
+            <li>Texto en interior con padding y sin box_sizing</li>
+        </ul>
+    </div>
+
+    <div class="contenedor contenedor3">
+        <ul>
+            <li>Texto en interior con padding y con box-</li>
+            <li>sizing</li>
+            <li>Texto en interior con padding y con box-</li>
+            <li>sizing</li>
+            <li>Texto en interior con padding y con box-</li>
+            <li>sizing</li>
+            <li>Texto en interior con padding y con box-</li>
+            <li>sizing</li>
+            <li>Texto en interior con padding y con box-</li>
+            <li>sizing</li>
+        </ul>
+    </div>
+</body>
+</html>
+

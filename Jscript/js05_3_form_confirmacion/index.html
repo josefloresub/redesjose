@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Confirmación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #69d68a;
+            color: #880e4f;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .cajaForm {
+            width: 50%;
+            background-color: #209e3c;
+            padding: 30px;
+            text-align: center;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2fa6dd;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 20px;
+            border: 2px solid #8e24aa;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            background-color: #0f25e6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d81b60;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cajaForm">
+
+        <h2>Formulario</h2>
+        <form id="miFormulario" action="respuesta.html" method="get" onsubmit="return confirmarEnvio()">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <div class="buttons">
+                <button type="submit">Enviar</button>
+                <button type="reset">Resetear</button>
+            </div>
+        </form>
+
+    </div>
+
+    <script>
+        function confirmarEnvio() {
+            return confirm("¿Estás seguro de que deseas enviar el formulario?");
+        }
+    </script>
+
+</body>
+
+</html>

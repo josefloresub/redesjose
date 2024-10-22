@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento Absoluto Centrado</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Contenedor principal que agrupa todo */
+        .contenedor-principal {
+            width: 90%;
+            height: 100vh;
+            background-color: #f0f8ff;
+            border: 5px solid white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contenedor-externo {
+            position: relative;
+            flex-grow: 1;
+            background-color: #f0f8ff;
+            overflow: hidden;
+        }
+
+        .contenedor-interno1,
+        .contenedor-interno2,
+        .contenedor-interno3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor-interno1 {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 30%;
+            height: 40%;
+            background-color: #20b2aa;
+            opacity: 0.8;
+        }
+
+        .contenedor-interno2 {
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+            width: 30%;
+            height: 40%;
+            background-color: #32cd32;
+            opacity: 0.8;
+            padding: 10px;
+
+            /* Ajustes de la imagen con espacio simulado entre repeticiones */
+            background-image: url('file:///C:/xampp/htdocs/mi_pagina/Css/cssParte1/css21DivsInternosAbsolutos/depositphotos.jpg');
+            background-repeat: repeat;
+            background-size: 35% 35%;
+            /* Reduce el tamaño de las imágenes para crear espacio */
+            background-position: center;
+            transform: rotate(20deg);
+            overflow: hidden;
+        }
+
+        .contenedor-interno3 {
+            position: absolute;
+            top: 20%;
+            left: 30%;
+            width: 40%;
+            height: 60%;
+            background-color: rgba(100, 149, 237, 0.7);
+            box-sizing: border-box;
+        }
+
+        footer {
+            background-color: #6699cc;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        p,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <div class="contenedor-externo">
+            <div class="contenedor-interno1">
+                <h2><strong>Contenedor interno 1</strong></h2>
+                hola hola hola hola hola hola hola hola hola hola
+            </div>
+            <div class="contenedor-interno2">
+                <h2><strong>Contenedor interno 3:</strong></h2>
+            </div>
+            <div class="contenedor-interno3">
+                <h2><strong>Contenedor interno 2</strong></h2>
+                hola hola hola hola hola hola hola hola hola hola hola
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

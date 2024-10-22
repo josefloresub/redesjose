@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice de ejercicios Laboratorio 2024</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            color: #6696cc;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #af0e0e;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background-color: #af0e0e;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            background-color: #af0e0e;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #d60f0f;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #af0e0e;
+            padding: 0;
+            z-index: 1000;
+        }
+
+        nav ul ul li {
+            width: 200px;
+        }
+
+        nav ul li:hover>ul {
+            display: block;
+        }
+
+        nav ul ul li a {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Índice de ejercicios Laboratorio 2024</h1>
+    <nav>
+        <ul>
+            <!-- HTML principal con onclick para redirigir y menú desplegable al pasar el mouse -->
+            <li>
+                <a href="C:\xampp\htdocs\mi_pagina\Html\index.html">HTML</a>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\mi_pagina\Html\ejer01PreguntasHTTP\index.html">Preguntas</a></li>
+                    <li><a href="C:\xampp\htdocs\mi_pagina\Html\ejer02Tablas\index.html">Tablas</a></li>
+                    <li><a href="C:\xampp\htdocs\mi_pagina\Html\ejer03Formularios\index.html">Forms</a></li>
+                    <li><a href="C:\xampp\htdocs\mi_pagina\Html\ejer04Iframe\index.html">Iframes</a></li>
+                </ul>
+            </li>
+
+            <!-- CSS principal con onclick para redirigir y menú desplegable al pasar el mouse -->
+            <li>
+                <a href="C:\xampp\htdocs\mi_pagina\Css\index.html">CSS</a>
+                <ul>
+                    <li><a href="C:\xampp\htdocs\mi_pagina\Css\cssParte1\css08CentradoYPadding\index.html">Padding</a>
+                    </li>
+                    <li><a href="C:\xampp\htdocs\mi_pagina\Css\cssParte1\css10DivsEnPila\index.html">Pilas</a></li>
+                    <li><a href="C:\xampp\htdocs\mi_pagina\Css\cssParte1\css11DivsEnFila\index.html">Filas</a></li>
+                    <li><a
+                            href="C:\xampp\htdocs\mi_pagina\Css\cssParte1\css14DivsInternosEnColumnas\index.html">Columnas</a>
+                    </li>
+                    <li><a
+                            href="C:\xampp\htdocs\mi_pagina\Css\cssParte1\css16SelectoresDeEventos\index.html">Eventos</a>
+                    </li>
+                    <li><a
+                            href="C:\xampp\htdocs\mi_pagina\Css\cssParte1\css20DivsInternosRelativos\index.html">Relativos</a>
+                    </li>
+                    <li><a
+                            href="C:\xampp\htdocs\mi_pagina\Css\cssParte1\css21DivsInternosAbsolutos\index.html">Absolutos</a>
+                    </li>
+                    <li><a
+                            href="C:\xampp\htdocs\mi_pagina\Redes\Css\cssParte1\css22CentradoVerticalCajaFlex\index.html">CajaFlex</a>
+                    </li>
+                    <li><a href="C:\xampp\htdocs\mi_pagina\Redes\Css\cssParte1\css25Menu\index.html">Menu</a>
+                    </li>
+            </li>
+            <li><a href="/mi_pagina/Css/cssParte2/css27FormularioRWD/index.html">FormularioRWD</a></li>
+            <li><a href="/mi_pagina/Css/cssParte2/css28TablsRWD/index.html">TablasRWD</a></li>
+            <li><a href="/mi_pagina/Css/cssParte2/css30LayoutBasico/index.html">LayoutBasico</a></li>
+        </ul>
+        </li>
+
+        <!-- JAVASCRIPT principal con onclick para redirigir y menú desplegable al pasar el mouse -->
+        <li>
+            <a href="#" onclick="window.location.href='/mi_pagina/JScript/index.html'; return false;">JAVASCRIPT</a>
+            <ul>
+                <li><a href="/mi_pagina/JScript/JsParte1/Sentencias.html">Sentencias</a></li>
+                <li><a href="/mi_pagina/JScript/JsParte1/Debuggers.html">Debuggers</a></li>
+                <li><a href="/mi_pagina/JScript/JsParte1/ComandosEnEventos.html">ComandosEnEventos</a></li>
+                <!-- Agrega los demás enlaces aquí -->
+            </ul>
+        </li>
+
+        <!-- Especiales principal con onclick para redirigir y menú desplegable al pasar el mouse -->
+        <li>
+            <a href="#" onclick="window.location.href='/mi_pagina/Especiales/index.html'; return false;">Especiales</a>
+            <ul>
+                <li><a href="/mi_pagina/Especiales/FormVariablessArregloOgjetos.html">FormVAObjetos</a></li>
+                <li><a href="/mi_pagina/Especiales/TablaFormulario.html">Tabla Form</a></li>
+                <!-- Agrega los demás enlaces aquí -->
+            </ul>
+        </li>
+
+        <!-- PHP principal con onclick para redirigir y menú desplegable al pasar el mouse -->
+        <li>
+            <a href="#" onclick="window.location.href='/mi_pagina/PHP/index.html'; return false;">PHP</a>
+            <ul>
+                <li><a href="/mi_pagina/PHP/EncriptacionAjax.html">Encriptado Ajax</a></li>
+                <li><a href="/mi_pagina/PHP/FORMEn.html">Form</a></li>
+                <!-- Agrega los demás enlaces aquí -->
+            </ul>
+        </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+{
+    "peliculas": [
+        {
+            "codPel": "PEL001",
+            "genero": "Acción",
+            "duracion": "120 min",
+            "descripcion": "Una película de acción emocionante",
+            "fechaEstreno": "2022-05-15",
+            "stockDisponible": 10
+        },
+        {
+            "codPel": "PEL002",
+            "genero": "Comedia",
+            "duracion": "95 min",
+            "descripcion": "Comedia hilarante sobre la vida cotidiana",
+            "fechaEstreno": "2021-08-10",
+            "stockDisponible": 5
+        },
+        {
+            "codPel": "PEL003",
+            "genero": "Drama",
+            "duracion": "110 min",
+            "descripcion": "Un drama profundo sobre la amistad y el sacrificio",
+            "fechaEstreno": "2020-10-01",
+            "stockDisponible": 8
+        },
+        {
+            "codPel": "PEL004",
+            "genero": "Terror",
+            "duracion": "105 min",
+            "descripcion": "Una película de terror que te mantendrá al borde de tu asiento",
+            "fechaEstreno": "2019-12-31",
+            "stockDisponible": 4
+        }
+    ]
+}

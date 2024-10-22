@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interacción con imágenes y opciones</title>
+    <style>
+        /* Estilo general */
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Estilos para el contenedor principal */
+        .contenedor-principal {
+            width: 90%;
+            height: 100%;
+            background-color: #b3e4e7;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Estilos para las opciones */
+        .opciones {
+            display: flex;
+            background-color: #b3e4e7;
+            padding: 0;
+            margin: 0;
+        }
+
+        .opcion {
+            padding: 15px 45px;
+            background-color: #ccc;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            /* Elimina el subrayado de los enlaces */
+        }
+
+        .opcion:hover {
+            background-color: #586886;
+        }
+
+        /* Estilos para los inputs */
+        .formulario {
+            margin: 20px 0;
+            padding-left: 0;
+        }
+
+        input[type="text"] {
+            display: block;
+            margin: 2px 0;
+            padding: 5px;
+            border: 1px solid #000;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            background-color: #f5f5a3;
+        }
+
+        /* Estilos para los contenedores de imágenes */
+        .contenedor-imagenes {
+            display: flex;
+            width: 25%;
+            padding: 0px 0;
+            background-color: #b3e4e7;
+            margin: 0;
+        }
+
+        .imagen-contenedor {
+            flex: 1;
+            height: 100px;
+            overflow: hidden;
+            position: relative;
+            background-color: #b3e4e7;
+            border: 1px solid #000;
+            margin: 0;
+        }
+
+        .imagen-contenedor img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+
+        .imagen-contenedor img:active {
+            position: fixed;
+            top: 55.6%;
+            left: 30%;
+            transform: translate(-50%, -50%) scale(0.5);
+            z-index: 10;
+        }
+
+        .contenedor-imagenes .imagen-contenedor:nth-child(4) img {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor-principal">
+        <!-- Opciones de la parte superior -->
+        <div class="opciones">
+            <a href="respuesta1.html" class="opcion">Opción 1</a>
+            <a href="respuesta2.html" class="opcion">Opción 2</a>
+            <a href="respuesta3.html" class="opcion">Opción 3</a>
+        </div>
+
+        <!-- Formulario con inputs -->
+        <div class="formulario">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido">
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres">
+        </div>
+
+        <h1>Expandir la imagen al 50% del contenedor con un click</h1>
+        <!-- Contenedor de imágenes (4 contenedores pequeños) -->
+        <div class="contenedor-imagenes">
+            <div class="imagen-contenedor">
+                <img src="C:\xampp\htdocs\mi_pagina\Css\cssParte1\css16SelectoresDeEventos\animal-1974025_1280.jpg"
+                    alt="Imagen 1">
+            </div>
+            <div class="imagen-contenedor">
+                <img src="C:\xampp\htdocs\mi_pagina\Css\cssParte1\css16SelectoresDeEventos\portada.jpg" alt="Imagen 2">
+            </div>
+            <div class="imagen-contenedor">
+                <img src="C:\xampp\htdocs\mi_pagina\Css\cssParte1\css16SelectoresDeEventos\depositphotos.jpg"
+                    alt="Imagen 3">
+            </div>
+            <div class="imagen-contenedor">
+                <img src="C:\xampp\htdocs\mi_pagina\Css\cssParte1\css16SelectoresDeEventos\Regreso-de-mascotas.jpg"
+                    alt="Imagen 4">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

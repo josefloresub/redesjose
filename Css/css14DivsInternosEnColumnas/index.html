@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encolumnado sin tablas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            /* Fondo blanco para los laterales */
+        }
+
+        .wrapper {
+            max-width: 1700px;
+            /* Ancho máximo del contenido beige */
+            width: 85%;
+            /* Ancho del contenedor que se adapta a diferentes tamaños de pantalla */
+            margin: 0px auto;
+            /* Márgenes superior e inferior, y auto para centrar horizontalmente */
+            background-color: #f0f0db;
+            /* Fondo beige */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Sombra opcional para dar un efecto flotante */
+        }
+
+        h1 {
+            text-align: left;
+            padding: 0px;
+            background-color: #f0f0db;
+            /* Mantener el fondo del título */
+            font-size: 24px;
+            /* Tamaño del título */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #f0f0db;
+            /* Fondo beige para el contenedor */
+        }
+
+        .column {
+            background-color: #add8e6;
+            /* Color azul claro para las columnas */
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 calc(20% - 20px);
+            /* Ajusta para que sean 5 columnas por fila */
+            box-sizing: border-box;
+            height: auto;
+            /* Ajusta la altura de las columnas automáticamente */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            /* Alinea el contenido hacia la parte superior */
+            align-items: center;
+            text-align: center;
+            /* Centrar texto dentro de la columna */
+            font-size: 22px;
+            /* Ajustar el tamaño del texto para que sea similar al del título */
+            overflow: auto;
+            /* Permite que el div se ajuste al contenido adicional */
+        }
+
+        img {
+            max-width: 100%;
+            /* Asegura que las imágenes no sobresalgan del contenedor */
+            height: auto;
+        }
+
+        /* Media Queries para ajustar el diseño en diferentes pantallas */
+        @media screen and (max-width: 1200px) {
+            .column {
+                flex: 1 1 calc(33.333% - 20px);
+                /* 3 columnas por fila en pantallas medianas */
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .column {
+                flex: 1 1 calc(50% - 20px);
+                /* 2 columnas por fila en pantallas más pequeñas */
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 1 1 100%;
+                /* 1 columna por fila en pantallas pequeñas */
+            }
+
+            /* Cambiar el color de fondo a amarillo cuando solo hay una columna */
+            .container .column {
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Encolumnado sin tablas</h1>
+        <div class="container">
+            <div class="column">
+                <p>Articulo 1</p>
+                <p>Datos para incluir en esta columna Datos para incluir en esta columna La siguiente imagen
+                    queda marginada automaticamente y ocupa el maximo ancho posible dentro de la columna
+                    independientemente del ancho real de la foto. Obviamente el tamaño real deberia ser mayor que el
+                    maximo posible previsto en el mejor de los casos (monitor de alta resolucion).</p>
+                <img src="\xampp\htdocs\mi_pagina\Css\cssParte1\css14DivsInternosEnColumnas\html.jpg" alt="Imagen 1">
+            </div>
+            <div class="column">
+                <p>Articulo 2</p>
+                <p>Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta
+                    columna Datos para incluir en esta columna Datos para incluir en esta columna</p>
+            </div>
+            <div class="column">
+                <p>Articulo 3</p>
+                <p>Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta
+                    columna Datos para incluir en esta columna Datos para incluir en esta columna</p>
+            </div>
+            <div class="column">
+                <p>Articulo 4</p>
+                <p>Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta
+                    columna Datos para incluir en esta columna Datos para incluir en esta columna</p>
+            </div>
+            <div class="column">
+                <p>Articulo 5</p>
+                <p>Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta
+                    columna Datos para incluir en esta columna Datos para incluir en esta columna</p>
+            </div>
+            <div class="column">
+                <p>Articulo 6</p>
+                <p>Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta
+                    columna Datos para incluir en esta columna Datos para incluir en esta columna</p>
+                <img src="C:\xampp\htdocs\mi_pagina\Css\cssParte1\css14DivsInternosEnColumnas\5ccece0b4295d501ad039bd002695b52.jpg"
+                    alt="Imagen 2">
+            </div>
+            <div class="column">
+                <p>Articulo 7</p>
+                <p>Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta
+                    columna Datos para incluir en esta columna Datos para incluir en esta columna</p>
+            </div>
+            <div class="column">
+                <p>Articulo 8</p>
+                <p>Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta
+                    columna Datos para incluir en esta columna Datos para incluir en esta columna</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Mascotas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #afe6a4;
+            color: #137049;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #37a71c;
+        }
+
+        .formulario {
+            background-color: #88cea7;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #438eb9;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #3ebb68;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #708f36;
+        }
+
+        .control {
+            background-color: #88cea7;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #55b9d8;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8bbd0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Consignas del ejercicio</h1>
+    <p>Declarar y hacer uso de Objetos de dato (datos de tipo objeto). Cargar de 2 perros a un array por programa, dejar
+        de usar prompt y document.write().</p>
+
+    <div class="formulario">
+        <h2>Adicionar persona</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Ingrese nombre">
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" placeholder="Ingrese apellido">
+
+        <label for="fechaNac">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNac">
+
+        <button id="crearPerro">Crea persona</button>
+    </div>
+
+    <div class="control">
+        <button id="mostrarLista">Lista persona</button>
+        <button id="ocultarPresentacion">Oculta presentación</button>
+    </div>
+
+    <div id="presentacion" class="hidden">
+        <h2>Presentación</h2>
+        <table id="tablaPerro">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Fecha de Nacimiento</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <p id="longitud"></p>
+    </div>
+
+    <script>
+        const arregloPerros = [
+            { nombre: "Gonzalo", apellido: "Gomez", fechaNac: "2011-07-01" },
+            { nombre: "Nicolas", apellido: "Rodriguez", fechaNac: "2008-08-17" }
+        ];
+
+        document.getElementById("crearPerro").addEventListener("click", function () {
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
+            const fechaNac = document.getElementById("fechaNac").value; //valores formualrio
+
+            if (nombre && apellido && fechaNac) {
+                const nuevaPerro = { nombre, apellido, fechaNac };
+                arregloPerros.push(nuevaPerro); // crea
+                alert("Perro añadida correctamente.");
+                document.getElementById("nombre").value = '';
+                document.getElementById("apellido").value = '';
+                document.getElementById("fechaNac").value = '';
+            } else {
+                alert("Por favor, complete todos los campos.");
+            }
+        });
+
+        document.getElementById("mostrarLista").addEventListener("click", function () {
+            const tabla = document.querySelector("#tablaPerro tbody");
+            tabla.innerHTML = ''; // Limpiar tabla
+
+            arregloPerros.forEach(perro => {
+                const fila = `<tr>
+                    <td>${perro.nombre}</td>
+                    <td>${perro.apellido}</td>
+                    <td>${perro.fechaNac}</td>
+                </tr>`;
+                tabla.innerHTML += fila;
+            });
+
+            document.getElementById("longitud").innerHTML = `Longitud del arreglo de objetos: ${arregloPerros.length}`;
+            document.getElementById("presentacion").classList.remove("hidden");
+        });
+
+        document.getElementById("ocultarPresentacion").addEventListener("click", function () {
+            document.getElementById("presentacion").classList.add("hidden");
+        });
+    </script>
+
+</body>
+
+</html>

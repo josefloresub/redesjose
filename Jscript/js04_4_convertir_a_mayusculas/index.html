@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Estilizada</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #contenedor {
+            width: 400px;
+            height: 500px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        #display {
+            background-color: #f44336;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #teclado {
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            background-color: #e53935;
+            color: white;
+            border: none;
+            width: 100px;
+            height: 60px;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #d32f2f;
+        }
+
+        button:active {
+            background-color: #c62828;
+            transform: scale(0.98);
+        }
+
+        button.wide {
+            width: 190px;
+        }
+
+        /* Espaciado entre las filas */
+        .row+.row {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="contenedor">
+
+        <div id="display">0</div>
+
+        <div id="teclado">
+
+            <div class="row">
+                <button onclick="agregar(1)">1</button>
+                <button onclick="agregar(2)">2</button>
+                <button onclick="agregar(3)">3</button>
+            </div>
+            <div class="row">
+                <button onclick="agregar(4)">4</button>
+                <button onclick="agregar(5)">5</button>
+                <button onclick="agregar(6)">6</button>
+            </div>
+            <div class="row">
+                <button onclick="agregar(7)">7</button>
+                <button onclick="agregar(8)">8</button>
+                <button onclick="agregar(9)">9</button>
+            </div>
+
+            <!-- Nueva fila para + y Mostrar Acumulador -->
+            <div class="row">
+                <button onclick="sumar()">+</button>
+                <button onclick="mostrarAcumulador()">Mostrar Acumulador</button>
+            </div>
+
+            <!-- Nueva fila para Borrar Acumulador y Borrar Display -->
+            <div class="row">
+                <button onclick="borrarAcumulador()">Borrar Acumulador</button>
+                <button onclick="borrarDisplay()">Borrar Display</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        let acumulador = 0;
+        let displayValue = "";
+
+        function agregar(num) {
+            displayValue += num;
+            document.getElementById('display').textContent = displayValue;
+        }
+
+        function sumar() {
+            acumulador += parseFloat(displayValue) || 0;
+            displayValue = "";
+            document.getElementById('display').textContent = 0;
+        }
+
+        function mostrarAcumulador() {
+            alert("Acumulador: " + acumulador);
+        }
+
+        function borrarAcumulador() {
+            acumulador = 0;
+            alert("Acumulador borrado");
+        }
+
+        function borrarDisplay() {
+            displayValue = "";
+            document.getElementById('display').textContent = 0;
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>  
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas en Línea</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center; /* Centrar horizontalmente */
+            min-height: 100vh;
+        }
+
+        .contenedor-general {
+            width: 80%; /* Ancho del contenedor general */
+            background-color: green; /* Color de fondo del contenedor */
+            border: 1px solid #000; /* Borde del contenedor */
+            padding: 1px; /* Padding del contenedor general */
+            display: flex; /* Usar flexbox para los contenedores internos */
+            padding-right: 150px; /* Mantener padding solo en la derecha */
+            flex-wrap: wrap; /* Permitir que los elementos fluyan a la siguiente fila */
+            justify-content: space-around; /* Espacio entre los contenedores */
+            align-items: flex-start; /* Alinear al inicio para permitir el crecimiento vertical */
+        }
+
+        .contenedor-interno {
+            width: 200px; /* Ancho fijo de 200px para cada contenedor */
+            margin: 3px; /* Espacio entre los contenedores */
+            border-radius: 15px; /* Bordes redondeados */
+            overflow: hidden; /* Asegurar que el contenido no se salga del borde redondeado */
+            height: 120px; /* Altura fija de los contenedores */
+            flex-shrink: 0; /* Evitar que los contenedores se reduzcan por completo */
+        }
+
+        .contenedor1 {
+            background-color: grey; /* Primer contenedor gris */
+        }
+
+        .contenedor2 {
+            position: relative; /* Posicionar elementos hijos */
+            background-color: pink; /* Color de fondo rosa */
+            border-radius: 15px; /* Bordes redondeados */
+            overflow: hidden; /* Asegurar que el contenido no se salga del borde redondeado */
+        }
+
+        .contenedor2::before {
+            content: ""; /* Crear un pseudo-elemento */
+            position: absolute; /* Posicionar de manera absoluta */
+            top: 0; /* Colocar en la parte superior del contenedor */
+            left: 0; /* Colocar en la parte izquierda */
+            width: 100%; /* El gradiente cubrirá todo el ancho */
+            height: 100%; /* El gradiente cubrirá toda la altura */
+            background: radial-gradient(circle, orange, white, pink); /* Gradiente radial más suave */
+            border-radius: 50%; /* Bordes redondeados para el círculo */
+            border: none; /* Eliminar borde */
+            box-shadow: none; /* Eliminar sombras */
+        }
+
+        .contenedor3 {
+            background: linear-gradient(to right, #66ccff 50%, #ff6699 50%); /* Gradiente lineal dividido */
+            display: flex; /* Usar flexbox para centrar la imagen */
+            align-items: center; /* Centrar verticalmente la imagen */
+            justify-content: center; /* Centrar horizontalmente la imagen */
+            position: relative; /* Para posicionar la imagen */
+        }
+
+        .contenedor3 img {
+            height: 100%; /* Imagen ocupa el 100% de la altura */
+            width: auto; /* Mantener la proporción de la imagen */
+        }
+
+        .contenedor4 {
+            background: linear-gradient(300deg, #66ccff, #ff6699); /* Gradiente lineal oblicuo */
+            padding: 20px; /* Padding entre el borde y el texto */
+            display: flex; /* Usar flexbox para centrar texto */
+        }
+
+        .contenedor5 {
+            background: linear-gradient(90deg, #66ccff, #ff6699); /* Gradiente lineal a 90 grados */
+            padding: 4px; /* Padding entre el borde y el texto */
+            display: flex; /* Usar flexbox para centrar texto */
+        }
+
+        /* Nuevo contenedor (el que añadimos recientemente) */
+        .contenedor-nuevo {
+            position: relative; /* Para permitir la superposición de la imagen */
+            background-color: pink; /* Mantener el fondo como el contenedor2 */
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center; /* Centrar la imagen horizontalmente */
+            
+        }
+
+        .contenedor-nuevo img {
+            width: 35%; /* La imagen ocupa solo el 35% del ancho del contenedor */
+            height: auto; /* Mantener proporción de la imagen */
+            position: relative; /* Asegurar que la imagen se superponga sobre el fondo radial */
+            z-index: 1; /* Asegurar que la imagen esté sobre el fondo */
+        }
+
+        .contenedor-nuevo::before {
+            content: ""; /* Pseudo-elemento para el gradiente */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, orange, white, pink); /* Gradiente radial */
+            z-index: 0; /* El fondo está debajo de la imagen */
+        }
+
+        /* Media query para ajustar el tamaño de los contenedores en pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .contenedor-interno {
+                width: 200px; /* Ancho fijo de 200px en pantallas pequeñas también */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contenedor-interno {
+                width: 200px; /* Ancho fijo de 200px en pantallas muy pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-general">
+        <div class="contenedor-interno contenedor1"></div>
+        <div class="contenedor-interno contenedor2"></div>
+        <div class="contenedor-interno contenedor3">
+            <img src="html.jpg" alt="Descripción de la imagen">
+        </div>
+        <div class="contenedor-interno contenedor-nuevo">
+            <img src="html.jpg" alt="Descripción de la imagen">
+        </div>
+        <div class="contenedor-interno contenedor4">
+            Nodo de texto
+        </div>
+        <div class="contenedor-interno contenedor5">
+            Nodo de texto
+        </div>
+    </div>
+</body>
+</html>

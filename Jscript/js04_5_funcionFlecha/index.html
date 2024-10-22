@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion Flecha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: hsl(209, 64%, 60%);
+            color: #1979c7;
+            text-align: ;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #1907b8;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        script {
+            display: block;
+            background-color: #17bef1;
+            color: #165df5;
+            padding: 10px;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 1.2rem;
+        }
+
+        .resultado {
+            background-color: #17a7e0;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            margin-top: 30px;
+        }
+
+        .code-block {
+            background-color: #2ec1fc;
+            padding: 15px;
+            border-radius: 10px;
+            font-family: "Courier New", monospace;
+            font-size: 1.2rem;
+            color: #0e5188;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Función Flecha</h1>
+    <div class="code-block">
+        <code>const suma = (a, b) => &#123;c = a + b; return c&#125;</code>
+    </div>
+
+    <script>
+        const a = 22;
+        const b = 9;
+        const suma = (a, b) => {
+            c = a + b;
+            return c;
+        }
+
+        document.write('<div class="resultado"><h1>Resultado de la función suma para a = ' + a + ' y b = ' + b + ' es c = ' + suma(a, b) + '</h1></div>');
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Responsive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #105055;
+            color: rgb(0, 0, 0);
+            margin: 0;
+            padding: 0px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            table-layout: fixed;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ff7300;
+            color: rgb(0, 0, 0);
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: #105055;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #1b7e85;
+        }
+
+        /* Estilos para el contenedor Pie */
+        #pie {
+            background-color: #626566;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 26px;
+        }
+
+        @media (max-width: 768px) {
+
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            th {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                margin-bottom: 20px;
+            }
+
+            td {
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+                border: none;
+                display: block;
+                border-bottom: 1px solid #ccc;
+            }
+
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                width: 45%;
+                padding-right: 10px;
+                text-align: left;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Tabla:</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nick</th>
+                <th>Mail</th>
+                <th>Web</th>
+                <th>Twitter</th>
+                <th>Skype</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Id">1</td>
+                <td data-label="Nick">AnaG</td>
+                <td data-label="Mail">ana.gomez@gmail.com</td>
+                <td data-label="Web">http://anagomez.com</td>
+                <td data-label="Twitter">@ana_gomez</td>
+                <td data-label="Skype">ana.gomez</td>
+            </tr>
+            <tr>
+                <td data-label="Id">2</td>
+                <td data-label="Nick">JuanC</td>
+                <td data-label="Mail">juan.cortez@hotmail.com</td>
+                <td data-label="Web">http://juancortez.com</td>
+                <td data-label="Twitter">@juancortez</td>
+                <td data-label="Skype">juan.cortez</td>
+            </tr>
+            <tr>
+                <td data-label="Id">3</td>
+                <td data-label="Nick">MaríaP</td>
+                <td data-label="Mail">maria.perez@yahoo.com</td>
+                <td data-label="Web">http://mariaperez.org</td>
+                <td data-label="Twitter">@mariaperez</td>
+                <td data-label="Skype">maria.perez</td>
+            </tr>
+            <tr>
+                <td data-label="Id">4</td>
+                <td data-label="Nick">LuisF</td>
+                <td data-label="Mail">luis.fernandez@gmail.com</td>
+                <td data-label="Web">http://luisfernandez.net</td>
+                <td data-label="Twitter">@luisfernandez</td>
+                <td data-label="Skype">luis.fernandez</td>
+            </tr>
+            <tr>
+                <td data-label="Id">5</td>
+                <td data-label="Nick">CarmenS</td>
+                <td data-label="Mail">carmen.sanchez@gmail.com</td>
+                <td data-label="Web">http://carmensanchez.com</td>
+                <td data-label="Twitter">@carmensanchez</td>
+                <td data-label="Skype">carmen.sanchez</td>
+            </tr>
+            <tr>
+                <td data-label="Id">6</td>
+                <td data-label="Nick">DiegoM</td>
+                <td data-label="Mail">diego.martinez@gmail.com</td>
+                <td data-label="Web">http://diegomartinez.com</td>
+                <td data-label="Twitter">@diegomartinez</td>
+                <td data-label="Skype">diego.martinez</td>
+            </tr>
+            <tr>
+                <td data-label="Id">7</td>
+                <td data-label="Nick">SofiaL</td>
+                <td data-label="Mail">sofia.lopez@yahoo.com</td>
+                <td data-label="Web">http://sofialopez.org</td>
+                <td data-label="Twitter">@sofialopez</td>
+                <td data-label="Skype">sofia.lopez</td>
+            </tr>
+            <tr>
+                <td data-label="Id">8</td>
+                <td data-label="Nick">CarlosV</td>
+                <td data-label="Mail">carlos.villanueva@gmail.com</td>
+                <td data-label="Web">http://carlosvillanueva.com</td>
+                <td data-label="Twitter">@carlosv</td>
+                <td data-label="Skype">carlos.villanueva</td>
+            </tr>
+            <tr>
+                <td data-label="Id">9</td>
+                <td data-label="Nick">PaulaD</td>
+                <td data-label="Mail">paula.diaz@hotmail.com</td>
+                <td data-label="Web">http://pauladiaz.com</td>
+                <td data-label="Twitter">@pauladiaz</td>
+                <td data-label="Skype">paula.diaz</td>
+            </tr>
+            <tr>
+                <td data-label="Id">10</td>
+                <td data-label="Nick">FernandoA</td>
+                <td data-label="Mail">fernando.arias@gmail.com</td>
+                <td data-label="Web">http://fernandoarias.com</td>
+                <td data-label="Twitter">@fernandoarias</td>
+                <td data-label="Skype">fernando.arias</td>
+            </tr>
+            <tr>
+                <td data-label="Id">11</td>
+                <td data-label="Nick">LuciaG</td>
+                <td data-label="Mail">lucia.garcia@yahoo.com</td>
+                <td data-label="Web">http://luciagarcia.org</td>
+                <td data-label="Twitter">@luciagarcia</td>
+                <td data-label="Skype">lucia.garcia</td>
+            </tr>
+            <tr>
+                <td data-label="Id">12</td>
+                <td data-label="Nick">ManuelR</td>
+                <td data-label="Mail">manuel.rodriguez@gmail.com</td>
+                <td data-label="Web">http://manuelrodriguez.net</td>
+                <td data-label="Twitter">@manuelrodriguez</td>
+                <td data-label="Skype">manuel.rodriguez</td>
+            </tr>
+            <tr>
+                <td data-label="Id">13</td>
+                <td data-label="Nick">IsabelT</td>
+                <td data-label="Mail">isabel.torres@gmail.com</td>
+                <td data-label="Web">http://isabeltorres.com</td>
+                <td data-label="Twitter">@isabeltorres</td>
+                <td data-label="Skype">isabel.torres</td>
+            </tr>
+            <tr>
+                <td data-label="Id">14</td>
+                <td data-label="Nick">RicardoM</td>
+                <td data-label="Mail">ricardo.moreno@hotmail.com</td>
+                <td data-label="Web">http://ricardomoreno.com</td>
+                <td data-label="Twitter">@ricardomoreno</td>
+                <td data-label="Skype">ricardo.moreno</td>
+            </tr>
+            <tr>
+                <td data-label="Id">15</td>
+                <td data-label="Nick">ElenaF</td>
+                <td data-label="Mail">elena.fernandez@yahoo.com</td>
+                <td data-label="Web">http://elenafernandez.org</td>
+                <td data-label="Twitter">@elenafernandez</td>
+                <td data-label="Skype">elena.fernandez</td>
+            </tr>
+            <tr>
+                <td data-label="Id">16</td>
+                <td data-label="Nick">JavierC</td>
+                <td data-label="Mail">javier.castro@gmail.com</td>
+                <td data-label="Web">http://javiercastro.com</td>
+                <td data-label="Twitter">@javiercastro</td>
+                <td data-label="Skype">javier.castro</td>
+            </tr>
+            <tr>
+                <td data-label="Id">17</td>
+                <td data-label="Nick">CristinaH</td>
+                <td data-label="Mail">cristina.herrera@hotmail.com</td>
+                <td data-label="Web">http://cristinaherrera.com</td>
+                <td data-label="Twitter">@cristinaherrera</td>
+                <td data-label="Skype">cristina.herrera</td>
+            </tr>
+            <tr>
+                <td data-label="Id">18</td>
+                <td data-label="Nick">RobertoG</td>
+                <td data-label="Mail">roberto.gonzalez@gmail.com</td>
+                <td data-label="Web">http://robertogonzalez.com</td>
+                <td data-label="Twitter">@robertogonzalez</td>
+                <td data-label="Skype">roberto.gonzalez</td>
+            </tr>
+            <tr>
+                <td data-label="Id">19</td>
+                <td data-label="Nick">TeresaP</td>
+                <td data-label="Mail">teresa.perez@gmail.com</td>
+                <td data-label="Web">http://teresaperez.com</td>
+                <td data-label="Twitter">@teresaperez</td>
+                <td data-label="Skype">teresa.perez</td>
+            </tr>
+            <tr>
+                <td data-label="Id">20</td>
+                <td data-label="Nick">AntonioV</td>
+                <td data-label="Mail">antonio.vargas@gmail.com</td>
+                <td data-label="Web">http://antoniovargas.com</td>
+                <td data-label="Twitter">@antoniovargas</td>
+                <td data-label="Skype">antonio.vargas</td>
+            </tr>
+            <tr>
+                <td data-label="Id">21</td>
+                <td data-label="Nick">LauraB</td>
+                <td data-label="Mail">laura.bustamante@hotmail.com</td>
+                <td data-label="Web">http://laurabustamante.com</td>
+                <td data-label="Twitter">@laurabustamante</td>
+                <td data-label="Skype">laura.bustamante</td>
+            </tr>
+            <tr>
+                <td data-label="Id">22</td>
+                <td data-label="Nick">OscarL</td>
+                <td data-label="Mail">oscar.lopez@gmail.com</td>
+                <td data-label="Web">http://oscarlopez.com</td>
+                <td data-label="Twitter">@oscarlopez</td>
+                <td data-label="Skype">oscar.lopez</td>
+            </tr>
+            <tr>
+                <td data-label="Id">23</td>
+                <td data-label="Nick">ClaudiaN</td>
+                <td data-label="Mail">claudia.nunez@yahoo.com</td>
+                <td data-label="Web">http://claudianunez.org</td>
+                <td data-label="Twitter">@claudianunez</td>
+                <td data-label="Skype">claudia.nunez</td>
+            </tr>
+            <tr>
+                <td data-label="Id">24</td>
+                <td data-label="Nick">MartinQ</td>
+                <td data-label="Mail">martin.quintana@gmail.com</td>
+                <td data-label="Web">http://martinquintana.com</td>
+                <td data-label="Twitter">@martinquintana</td>
+                <td data-label="Skype">martin.quintana</td>
+            </tr>
+            <tr>
+                <td data-label="Id">25</td>
+                <td data-label="Nick">VictoriaM</td>
+                <td data-label="Mail">victoria.mendoza@gmail.com</td>
+                <td data-label="Web">http://victoriamendoza.com</td>
+                <td data-label="Twitter">@victoriamendoza</td>
+                <td data-label="Skype">victoria.mendoza</td>
+            </tr>
+            <tr>
+                <td data-label="Id">26</td>
+                <td data-label="Nick">FranciscoR</td>
+                <td data-label="Mail">francisco.ruiz@hotmail.com</td>
+                <td data-label="Web">http://franciscoruiz.com</td>
+                <td data-label="Twitter">@franciscoruiz</td>
+                <td data-label="Skype">francisco.ruiz</td>
+            </tr>
+            <tr>
+                <td data-label="Id">27</td>
+                <td data-label="Nick">GabrielaO</td>
+                <td data-label="Mail">gabriela.ortega@yahoo.com</td>
+                <td data-label="Web">http://gabrielaortega.org</td>
+                <td data-label="Twitter">@gabrielaortega</td>
+                <td data-label="Skype">gabriela.ortega</td>
+            </tr>
+            <tr>
+                <td data-label="Id">28</td>
+                <td data-label="Nick">HugoM</td>
+                <td data-label="Mail">hugo.molina@gmail.com</td>
+                <td data-label="Web">http://hugomolina.com</td>
+                <td data-label="Twitter">@hugomolina</td>
+                <td data-label="Skype">hugo.molina</td>
+            </tr>
+            <tr>
+                <td data-label="Id">29</td>
+                <td data-label="Nick">PatriciaZ</td>
+                <td data-label="Mail">patricia.zamora@gmail.com</td>
+                <td data-label="Web">http://patriciazamora.com</td>
+                <td data-label="Twitter">@patriciazamora</td>
+                <td data-label="Skype">patricia.zamora</td>
+            </tr>
+            <tr>
+                <td data-label="Id">30</td>
+                <td data-label="Nick">JorgeL</td>
+                <td data-label="Mail">jorge.lopez@gmail.com</td>
+                <td data-label="Web">http://jorgelopez.com</td>
+                <td data-label="Twitter">@jorgelopez</td>
+                <td data-label="Skype">jorge.lopez</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Contenedor Pie añadido -->
+    <div id="pie">Pie</div>
+
+</body>
+
+</html>

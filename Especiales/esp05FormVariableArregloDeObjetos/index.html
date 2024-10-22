@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Película</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e3f2fd;
+        }
+
+        #formPeliculas {
+            background-color: #fefefe;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 600px;
+            /* Max width to prevent overflow on large screens */
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #b43f49;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #990904;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="formPeliculas">
+        <h2>Agregar Película</h2>
+        <label for="codPel">Código de Película:</label>
+        <input type="text" id="codPel" name="codPel" required>
+
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero" required>
+            <option value="">Seleccione un género</option>
+            <option value="Acción">Acción</option>
+            <option value="Comedia">Comedia</option>
+            <option value="Drama">Drama</option>
+            <option value="Ciencia Ficción">Ciencia Ficción</option>
+            <option value="Terror">Terror</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Romance">Romance</option>
+            <option value="Documental">Documental</option>
+            <option value="Animación">Animación</option>
+            <option value="Fantástico">Fantástico</option>
+        </select>
+
+        <label for="duracion">Duración (minutos):</label>
+        <input type="number" id="duracion" name="duracion" required>
+
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" name="descripcion" required>
+
+        <label for="fechaEstreno">Fecha de Estreno:</label>
+        <input type="date" id="fechaEstreno" name="fechaEstreno" required>
+
+        <label for="stockDisponible">Stock Disponible:</label>
+        <input type="number" id="stockDisponible" name="stockDisponible" value="0" required>
+
+        <button type="submit">ENVIAR</button>
+    </form>
+
+    <script>
+        // Validación personalizada del formulario
+        document.getElementById("formPeliculas").addEventListener("submit", function (event) {
+            const form = event.target;
+
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                alert("Complete este cuadro");
+            } else {
+                event.preventDefault(); // Prevent actual submission for demo purposes
+
+                // Aquí puedes realizar acciones como guardar datos antes de redirigir
+                const nuevaPelicula = {
+                    codPel: form.codPel.value,
+                    genero: form.genero.value,
+                    duracion: form.duracion.value,
+                    descripcion: form.descripcion.value,
+                    fechaEstreno: form.fechaEstreno.value,
+                    stockDisponible: form.stockDisponible.value
+                };
+
+                console.log("Nueva Película Agregada:", nuevaPelicula);
+                alert("Película agregada exitosamente!");
+
+                // Redirigir a la página "Respuesta"
+                window.location.href = "respuesta.html"; // Cambia esta línea
+            }
+        });
+    </script>
+
+</body>
+
+</html>

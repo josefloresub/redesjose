@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas referencias sobre protocolo HTTP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #0073e6;
+        }
+        hr {
+            margin: 20px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #0073e6;
+            font-size: 16px;
+        }
+        nav a:hover {
+            color: #005bb5;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 10px;
+            border-top: 1px solid #0073e6;
+            text-align: ;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Título principal -->
+    <header>
+        <h1>Preguntas referencias sobre protocolo HTTP</h1>
+    </header>
+
+    <hr>
+
+    <!-- Sección de referencias de interés -->
+    <h2>Sección de referencias de interés</h2>
+    <p>Abrir enlaces en nueva pestaña:</p>
+    <nav>
+        <ul>
+            <li><a href="https://developer.mozilla.org/es/docs/Web/HTTP" target="_blank">Protocolo HTTP en MDN</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Protocolo_de_transferencia_de_hipertexto" target="_blank">Protocolo HTTP en Wikipedia</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <!-- Sección de preguntas sobre HTTP -->
+    <h2>Sección de preguntas sobre HTTP</h2>
+    <hr>
+    <ul>
+        <li>
+            <strong>1) ¿Sobre qué protocolo binario está montado el protocolo HTTP?</strong>
+            <p>HTTP está montado sobre TCP (Transmission Control Protocol), que es un protocolo de transporte confiable en la capa de transporte del modelo OSI. HTTP también puede utilizar TLS (cuando se usa HTTPS), para encriptar la conexión sobre TCP.</p>
+        </li>
+        <li>
+            <strong>2) ¿Cuáles son los clientes HTTP y los servidores HTTP más utilizados?</strong>
+            <p>Clientes HTTP más utilizados: Navegadores web como Google Chrome, Mozilla Firefox, Microsoft Edge, y Safari. Herramientas de línea de comandos como cURL y Postman.</p>
+            <p>Servidores HTTP más utilizados: Apache HTTP Server, Nginx, Microsoft IIS (Internet Information Services), LiteSpeed, Caddy.</p>
+        </li>
+        <li>
+            <strong>3) ¿Qué verbos admite un comando en el requerimiento HTTP?</strong>
+            <p>Los verbos HTTP, también conocidos como métodos, más comunes son: GET, POST, PUT, DELETE, HEAD, PATCH, OPTIONS.</p>
+        </li>
+        <li>
+            <strong>4) ¿Qué contenido lleva el body de un requerimiento HTTP?</strong>
+            <p>El cuerpo de una solicitud HTTP puede contener datos enviados al servidor, como: datos de formularios (por ejemplo, para solicitudes POST), JSON o XML (para intercambiar datos estructurados), archivos binarios (como imágenes o archivos de texto). Puede estar vacío en algunos casos, como en solicitudes GET o HEAD.</p>
+        </li>
+        <li>
+            <strong>5) ¿Qué diferencia existe entre un URL y un URI?</strong>
+            <p>URI (Uniform Resource Identifier) es un identificador genérico que puede ser un nombre, dirección o cualquier referencia a un recurso en la web. URL (Uniform Resource Locator) es un tipo de URI que especifica la ubicación de un recurso.</p>
+        </li>
+        <li>
+            <strong>6) ¿Cómo se almacena información relacionada con las respuestas HTTP?</strong>
+            <p>La información de las respuestas HTTP se puede almacenar usando: Cookies, headers de cache como Cache-Control y Expires, almacenamiento en caché en el servidor, o servidores proxy.</p>
+        </li>
+        <li>
+            <strong>7) ¿Qué significa Virtual Hosting?</strong>
+            <p>El Virtual Hosting permite que un solo servidor físico sirva múltiples dominios o sitios web. Existen dos tipos: Name-based Virtual Hosting y IP-based Virtual Hosting.</p>
+        </li>
+        <li>
+            <strong>8) ¿Por qué el HTTP se considera stateless?</strong>
+            <p>HTTP es considerado stateless porque cada solicitud es independiente y no mantiene información del estado de solicitudes anteriores.</p>
+        </li>
+        <li>
+            <strong>9) ¿Qué nueva versión de HTTP se está usando para mejorar la velocidad de la web?</strong>
+            <p>La nueva versión es HTTP/3, que usa QUIC en lugar de TCP, mejorando la velocidad y el rendimiento.</p>
+        </li>
+        <li>
+            <strong>10) ¿Cómo va a mejorar el comportamiento de una aplicación web en ambientes ruidosos o de débil conexión?</strong>
+            <p>HTTP/3 y QUIC mejoran la experiencia en conexiones inestables mediante la reducción de latencia y el manejo eficiente de paquetes perdidos.</p>
+        </li>
+    </ul>
+
+    <hr>
+
+    <!-- Sección de imágenes -->
+    <h2>Sección de imágenes representativas del protocolo</h2>
+    <img src="http.jpg">
+
+    <hr>
+
+    <!-- Sección de videos -->
+    <h2>Sección de videos representativos del protocolo</h2>
+    <video width="400" controls>
+        <source src="http_video.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de este video.
+    </video>
+
+    <!-- Sección de datos del alumno -->
+    <footer>
+        <h2>Datos del alumno</h2>
+        <p>Nombre: José Flores</p>
+        <p>Numero de legajo: 000187123</p>
+        <p>Email: jose.tupac@comunidad.ub.edu.ar</p>
+    </footer>
+
+</body>
+</html>
+

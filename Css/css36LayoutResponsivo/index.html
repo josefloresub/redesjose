@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño con 5 columnas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #FF6B4E;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #FF6B4E;
+        }
+
+        nav a {
+            background-color: #f1ab42;
+            padding: 15px 220.1px;
+            text-decoration: none;
+            color: black;
+            font-size: 14.5px;
+        }
+
+        nav a:hover {
+            background-color: #C0C0C0;
+        }
+
+        #contenido {
+            background-color: #929292;
+            height: calc(100vh - 180px);
+            /* Espacio para header y footer */
+            overflow-y: scroll;
+            padding: 20px;
+            display: flex;
+        }
+
+        .columna {
+            flex: 1;
+            padding: 10px;
+            background-color: #929292;
+            margin-right: 10px;
+            color: black;
+        }
+
+        .columna img {
+            display: block;
+            margin: -20px auto;
+            transform: rotate(20deg);
+            width: 220px;
+            height: auto;
+        }
+
+        /* Quitar margen derecho de la última columna */
+        .columna:last-child {
+            margin-right: 0;
+        }
+
+        footer {
+            background-color: #FF6B4E;
+            color: black;
+            text-align: center;
+            padding: 25px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Título principal de la página</h1>
+    </header>
+
+    <nav>
+        <a href="C:\xampp\htdocs\mi_pagina\Redes\Html\index.html">HTML</a>
+        <a href="C:\xampp\htdocs\mi_pagina\Redes\Css\index.html">CSS</a>
+        <a href="C:\xampp\htdocs\mi_pagina\Redes\Jscript\index.html">JSCRIPT</a>
+        <a href="C:\xampp\htdocs\mi_pagina\Redes\Php\index.html">PHP</a>
+    </nav>
+
+    <div id="contenido">
+        <div class="columna">
+            <p>11</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+        </div>
+        <div class="columna">
+            <p>12</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <img src="C:\xampp\htdocs\mi_pagina\Redes\Css\cssParte1\css36LayoutResponsivo\animal-1974025_1280.jpg"
+                alt="Imagen rotada">
+
+        </div>
+        <div class="columna">
+            <p>13</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+        </div>
+        <div class="columna">
+            <p>14</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+        </div>
+        <div class="columna">
+            <p>15</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+            <p>El contenido puede crecer indefinidamente agrandando el div...</p>
+        </div>
+    </div>
+
+    <footer>
+        <h1>Pie de página</h1>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Operaciones con tres inputs</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #99c2f8;
+            color: #1215c5;
+            text-align: ;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #1c29e0;
+        }
+
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            padding: 5px;
+            border: 2px solid #0f0be4;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            width: 150px;
+        }
+
+        button {
+            background-color: #180cb8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2602f1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Introducir un valor en los cuadros de texto y luego pulsar el botón para ejecutar la función correspondiente.
+    </h2>
+
+    <label>Entrada 1: </label>
+    <input type="number" id="input1" value="0"><br><br>
+
+    <label>Entrada 2: </label>
+    <input type="number" id="input2" value="0"><br><br>
+
+    <label>Entrada 3: </label>
+    <input type="number" id="input3" value="0"><br><br>
+
+    <label>Resultado: </label>
+    <input type="text" id="resultado" readonly><br><br>
+
+    <button id="Suma">Suma</button>
+    <button id="Promedio">Promedio</button>
+    <button id="Mayor">Mayor</button>
+
+    <script>
+        input1 = document.getElementById("input1");
+        input2 = document.getElementById("input2");
+        input3 = document.getElementById("input3");
+        resultado = document.getElementById("resultado");
+
+        document.getElementById("Suma").addEventListener("click", function () {
+            suma = parseFloat(input1.value) + parseFloat(input2.value) + parseFloat(input3.value);
+            resultado.value = suma;
+        });
+
+        document.getElementById("Promedio").addEventListener("click", function () {
+            promedio = (parseFloat(input1.value) + parseFloat(input2.value) + parseFloat(input3.value)) / 3;
+            resultado.value = promedio;
+        });
+
+        document.getElementById("Mayor").addEventListener("click", function () {
+            mayor = Math.max(parseFloat(input1.value), parseFloat(input2.value), parseFloat(input3.value));
+            resultado.value = mayor;
+        });
+    </script>
+</body>
+
+</html>

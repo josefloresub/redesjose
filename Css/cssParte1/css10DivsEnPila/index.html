@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas en Pila</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        .contenedor-general {
+            width: 80%;
+            text-align: left;
+            background-color: green;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: left;
+        }
+
+        .contenedor-interno {
+            width: 50%;
+            margin: 20px auto;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        /* Estilos por tamaño de viewport para el primer div */
+        .contenedor1 {
+            height: 150px;
+        }
+
+        @media (max-width: 600px) {
+            .contenedor1 {
+                background-color: lightblue;
+            }
+        }
+
+        @media (min-width: 600px) and (max-width: 1080px) {
+            .contenedor1 {
+                background-color: yellow;
+            }
+        }
+
+        @media (min-width: 1080px) {
+            .contenedor1 {
+                background-color: grey;
+            }
+        }
+
+        /* Fondo radial para el segundo contenedor */
+        .contenedor2 {
+            position: relative;
+            height: 150px;
+            background-color: rgb(252, 228, 236);
+            /* Fondo rosa */
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .contenedor2::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scaleX(2.5);
+            /* Escala en el eje X para hacer el círculo ovalado */
+            width: 150px;
+            height: 110px;
+            background: radial-gradient(ellipse at center, rgb(241, 250, 111) 30%, rgb(243, 247, 36) 50%, transparent 110%);
+            /* Gradiente radial con un difuminado en los bordes */
+            border-radius: 50%;
+            /* Círculo que se transforma en óvalo */
+            box-shadow: 0 0 40px rgba(365, 275, 0, 1.5);
+            /* Sombra suave */
+        }
+
+
+        .contenedor3 {
+            background: linear-gradient(to right, #66ccff 50%, #ff6699 50%);
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .contenedor3 img {
+            height: 100%;
+            width: auto;
+        }
+
+        .contenedor4 {
+            background: linear-gradient(135deg, #ff6699, #66ccff);
+            color: white;
+            padding: 24px;
+            height: 150px;
+            display: flex;
+            align-items: ;
+        }
+
+        .contenedor5 {
+            background: linear-gradient(90deg, #66ccff, #ff6699);
+            color: white;
+            height: 150px;
+            padding: 3px;
+            display: flex;
+            align-items: ;
+            justify-content: ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor-general">
+        <h1>Cajas en Pila</h1>
+
+        <div class="contenedor-interno contenedor1"></div>
+        <div class="contenedor-interno contenedor2"></div>
+        <div class="contenedor-interno contenedor3">
+            <img src="C:\xampp\htdocs\mi_pagina\Redes\Css\cssParte1\css10DivsEnPila\html.jpg"
+                alt="Descripción de la imagen">
+        </div>
+        <div class="contenedor-interno contenedor4">
+            Nodo de texto
+        </div>
+        <div class="contenedor-interno contenedor5">
+            Nodo de texto
+        </div>
+    </div>
+</body>
+
+</html>

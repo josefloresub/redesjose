@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de INPUT con KeyUp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #8fcbee;
+            color: #294ef5;
+            text-align: ;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #444343;
+        }
+
+        .formulario {
+            background-color: #68bee0;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="number"],
+        input[type="text"],
+        select {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #2f5cd8;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #373ae9;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #d81b60;
+        }
+
+        .control-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ejercicio de Validación de un INPUT</h1>
+
+    <div class="formulario">
+        <label for="dia">Ingrese el día del mes:</label>
+        <input type="number" id="dia" min="1" max="31" placeholder="Día">
+        <span id="dia-error" class="error">El día debe estar entre 1 y 31</span>
+
+        <label for="mes">Ingrese el mes:</label>
+        <input type="number" id="mes" placeholder="Mes (1 a 12)">
+        <span id="mes-error" class="error">El mes debe estar entre 1 y 12</span>
+
+        <div class="control-buttons">
+            <button id="enviar">Enviar</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        const diaInput = document.getElementById("dia"); //elementos dom
+        const mesInput = document.getElementById("mes");
+        const diaError = document.getElementById("dia-error");
+        const mesError = document.getElementById("mes-error");
+
+        // tiempo real 
+        diaInput.addEventListener("keyup", function () {
+            const dia = diaInput.value;
+            if (dia < 1 || dia > 31) {
+                diaError.style.display = "block";
+            } else {
+                diaError.style.display = "none";
+            }
+        });
+
+
+        mesInput.addEventListener("keyup", function () {
+            const mes = mesInput.value;
+            if (mes < 1 || mes > 12) {
+                mesError.style.display = "block";
+            } else {
+                mesError.style.display = "none";
+            }
+        });
+
+        // Envio
+        document.getElementById("enviar").addEventListener("click", function () {
+            const dia = diaInput.value;
+            const mes = mesInput.value;
+            let valid = true;
+
+            if (!dia || dia < 1 || dia > 31) {
+                diaError.style.display = "block";
+                valid = false;
+            }
+
+            if (!mes || mes < 1 || mes > 12) {
+                mesError.style.display = "block";
+                valid = false;
+            }
+
+            if (valid) {
+                alert("Formulario enviado correctamente.");
+            } else {
+                alert("Por favor, corrija los errores.");
+            }
+        });
+
+        // Reseo y errosres
+        document.getElementById("reset").addEventListener("click", function () {
+            diaInput.value = '';
+            mesInput.value = '';
+            diaError.style.display = "none";
+            mesError.style.display = "none";
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas - Ejercicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+            border-collapse: collapse;
+            width: 78%;
+            margin-bottom: 35px;
+        }
+        table, th, td {
+            border: 3px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: ;
+            height: 15px; /* Asegura que todas las celdas tengan la misma altura */
+        }
+        th {
+            background-color: #b3d9ff;
+        }
+        /* Estilo para la segunda tabla */
+        .styled-table th {
+            background-color: #a3cbe1;
+        }
+        .styled-table th[colspan] {
+            background-color: #a3cbe1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Título y primera tabla -->
+    <h2>Tabla representando la matriz completa</h2>
+    <table>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+    </table>
+
+    <!-- Título y segunda tabla -->
+    <h2>Tabla agrupando celdas y agregando un poco de estilo</h2>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th rowspan="2"></th>
+                <th colspan="3">LUNES</th>
+                <th colspan="3">MARTES</th>
+                <th colspan="3">MIERCOLES</th>
+                <th colspan="3">JUEVES</th>
+                <th colspan="3">VIERNES</th>
+            </tr>
+            <tr>
+                <th>Mañana</th>
+                <th>Tarde</th>
+                <th>Noche</th>
+                <th>Mañana</th>
+                <th>Tarde</th>
+                <th>Noche</th>
+                <th>Mañana</th>
+                <th>Tarde</th>
+                <th>Noche</th>
+                <th>Mañana</th>
+                <th>Tarde</th>
+                <th>Noche</th>
+                <th>Mañana</th>
+                <th>Tarde</th>
+                <th>Noche</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3">Clases/niños</th>
+                <td>Natación</td>
+                <td>Voley</td>
+                <td>Fútbol</td>
+                <td>Voley</td>
+                <td>Natación</td>
+                <td>Basket</td>
+                <td>Tenis</td>
+                <td>Fútbol</td>
+                <td>Handball</td>
+                <td>Basket</td>
+                <td>Hockey</td>
+                <td>Voley</td>
+                <td>Fútbol</td>
+                <td>Atletismo</td>
+                <td>Tenis</td>
+            </tr>
+            <tr>
+                <td>Hockey</td>
+                <td>Handball</td>
+                <td>Basket</td>
+                <td>Handball</td>
+                <td>Hockey</td>
+                <td>Rugby</td>
+                <td>Natación</td>
+                <td>Basket</td>
+                <td>Atletismo</td>
+                <td>Rugby</td>
+                <td>Tenis</td>
+                <td>Handball</td>
+                <td>Basket</td>
+                <td>Voley</td>
+                <td>Natación</td>
+            </tr>
+            <tr>
+                <td>Tenis</td>
+                <td>Atletismo</td>
+                <td>Rugby</td>
+                <td>Atletismo</td>
+                <td>Tenis</td>
+                <td>Fútbol</td>
+                <td>Hockey</td>
+                <td>Rugby</td>
+                <td>Voley</td>
+                <td>Fútbol</td>
+                <td>Natación</td>
+                <td>Atletismo</td>
+                <td>Rugby</td>
+                <td>Handball</td>
+                <td>Hockey</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Clases/adultos</th>
+                <td>Boxeo</td>
+                <td>Pilates</td>
+                <td>Béisbol</td>
+                <td>Yoga</td>
+                <td>Karate</td>
+                <td>Padel</td>
+                <td>Crossfit</td>
+                <td>Ciclismo</td>
+                <td>Golf</td>
+                <td>Pilates</td>
+                <td>Boxeo</td>
+                <td>Béisbol</td>
+                <td>Ciclismo</td>
+                <td>Padel</td>
+                <td>Karate</td>
+            </tr>
+            <tr>
+                <td>Karate</td>
+                <td>Ciclismo</td>
+                <td>Padel</td>
+                <td>Pilates</td>
+                <td>Crossfit</td>
+                <td>Golf</td>
+                <td>Boxeo</td>
+                <td>Yoga</td>
+                <td>Béisbol</td>
+                <td>Yoga</td>
+                <td>Crossfit</td>
+                <td>Golf</td>
+                <td>Pilates</td>
+                <td>Béisbol</td>
+                <td>Boxeo</td>
+            </tr>
+            <tr>
+                <td>Crossfit</td>
+                <td>Yoga</td>
+                <td>Golf</td>
+                <td>Ciclismo</td>
+                <td>Boxeo</td>
+                <td>Béisbol</td>
+                <td>Karate</td>
+                <td>Pilates</td>
+                <td>Padel</td>
+                <td>Ciclismo</td>
+                <td>Karate</td>
+                <td>Padel</td>
+                <td>Yoga</td>
+                <td>Golf</td>
+                <td>Crossfit</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+

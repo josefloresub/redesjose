@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario HTML</title>
+    <style>
+        label {
+            font-weight: bold; /* Hace que el texto sea más grueso */
+        }
+    </style>
+</head>
+<body> 
+    <h1>Formulario Html</h1>
+
+    <!-- Entradas simples -->
+    <h2>Entradas simples</h2>
+    <form action="respuestaFormulario.html" method="GET"> <!-- Cambiado a GET -->
+        <label for="apellido">• Apellido:</label>
+        <input type="text" id="apellido" name="apellido"><br><br>
+
+        <label for="password">• Contraseña:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label for="deshabilitado">• Campo deshabilitado:</label>
+        <input type="text" id="deshabilitado" name="deshabilitado" value="valor deshabilitado" disabled><br><br>
+
+        <label for="soloLectura">• Campo de solo lectura:</label>
+        <input type="text" id="soloLectura" name="soloLectura" value="valorSoloLectura" readonly><br><br>
+
+        <!-- Entradas de selección -->
+        <h2>Entradas de selección</h2>
+
+        <label>• Práctica deportes</label>
+        <input type="checkbox" id="deportes" name="deportes"><br>
+
+        <label>• Práctica musical</label>
+        <input type="checkbox" id="musica" name="musica" checked><br>
+
+        <label>• Práctica de pintura artística</label>
+        <input type="checkbox" id="pintura" name="pintura"><br><br>
+
+        <label>• Sexo</label>
+        <input type="radio" id="masculino" name="sexo" value="masculino">
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="femenino" name="sexo" value="femenino" checked>
+        <label for="femenino">Femenino</label><br><br>
+
+        <label for="estudios">• Estudios cursados</label>
+        <select id="estudios" name="estudios">
+            <option value="primarios">Primarios</option>
+            <option value="secundarios">Secundarios</option>
+            <option value="terciarios">Terciarios</option>
+            <option value="universitarios">Universitarios</option>
+            <option value="postgrado">Postgrado</option>
+        </select><br><br>
+
+        <label for="fecha">• Fecha y Hora</label>
+        <input type="datetime-local" id="fecha" name="fecha"><br><br>
+
+        <label for="color">• Color</label>
+        <input type="color" id="color" name="color"><br><br>
+
+        <!-- Entradas con validación -->
+        <h2>Entradas con validación</h2>
+
+        <label for="comentario">• Comentario (validación por requerido):</label>
+        <input type="text" id="comentario" name="comentario" required><br><br>
+
+        <label for="email">• Email con doble validación (@ y requerido):</label>
+        <input type="email" id="email" name="email" placeholder="texto@texto" required><br><br>
+
+        <label for="numero">• Número entero limitado (validación por tipo numérico y cotas):</label>
+        <input type="number" id="numero" name="numero" min="1" max="100" required><br><br>
+
+        <label for="decimal">• Número decimal:</label>
+        <input type="number" id="decimal" name="decimal" step="0.01"><br><br>
+
+        <label for="url">• URL (validación por requerido, escribir http://):</label>
+        <input type="url" id="url" name="url" placeholder="http://xxx" required><br><br>
+
+        <label for="customPattern">• Pattern de validación:</label>
+        <input type="text" id="customPattern" name="customPattern" pattern="[A-Za-z]{3}[12]{2}" title="3 letras y dos números que sean 1 o 2 solamente">
+        <br><br>
+
+        <label for="pattern">• Pattern de validación:</label>
+        <input type="text" id="pattern" name="pattern" pattern="\(+54)[0-9]{10}" placeholder="(+54) 11 44445555" title="(+54) 11 xxxxxxxx">
+        <br><br>
+
+        <input type="submit" value="Enviar">
+        <br><br>
+        <input type="reset" value="Restablecer">
+    </form>
+</body>
+</html>
+

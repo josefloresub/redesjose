@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alcances de Variables</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eb6f6f;
+            color: #820000;
+            text-align: ;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #b30000;
+        }
+
+        button {
+            background-color: #a71515;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #b30000;
+        }
+
+        .container {
+            background-color: #da6e5c;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-top: 30px;
+        }
+    </style>
+
+    <script>
+        var variableGlobal;
+    </script>
+</head>
+
+<body>
+
+    <h1>Ejemplo de Alcances de Variables</h1>
+
+    <div class="container">
+        <script type="text/javascript">
+            var variableGlobal;
+            alert("La variable global ha sido declarada, pero no asignada.");
+            alert("Valor de variableGlobal: " + variableGlobal);
+            alert("Tipo de variableGlobal: " + typeof variableGlobal);
+        </script>
+
+        <button onclick="var variableLocal = prompt('Ingrese un valor para la variable local:');
+            alert('Valor de variableLocal: ' + variableLocal);
+            alert('Tipo de variableLocal: ' + typeof variableLocal);">
+            Inicialización desde adentro de un procedimiento
+        </button>
+
+        <button onclick="variableGlobal = prompt('Ingrese un valor para la variable global:');
+            alert('Valor de variableGlobal: ' + variableGlobal);
+            alert('Tipo de variableGlobal: ' + typeof variableGlobal);">
+            Inicialización forzada desde adentro de un procedimiento
+        </button>
+
+        <button onclick="alert('Valor de variableGlobal: ' + variableGlobal);">
+            Mostrar variable global
+        </button>
+    </div>
+
+</body>
+
+</html>
