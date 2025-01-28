@@ -11,10 +11,24 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             background-color: #e3f2fd;
+            position: relative;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #b43f49;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         #formPeliculas {
@@ -24,7 +38,10 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             width: 100%;
             max-width: 600px;
-            /* Max width to prevent overflow on large screens */
+            margin-top: 80px;
+            /* Espacio para el header */
+            margin-bottom: 60px;
+            /* Espacio para el footer */
         }
 
         h2 {
@@ -61,10 +78,25 @@
         button:hover {
             background-color: #990904;
         }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #b43f49;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
     </style>
 </head>
 
 <body>
+
+    <header>
+        Formulario para ALTA - Maestro de películas
+    </header>
 
     <form id="formPeliculas">
         <h2>Agregar Película</h2>
@@ -100,6 +132,10 @@
 
         <button type="submit">ENVIAR</button>
     </form>
+
+    <footer>
+        Pie del formulario
+    </footer>
 
     <script>
         // Validación personalizada del formulario
