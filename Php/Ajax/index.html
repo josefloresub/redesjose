@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador AJAX</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1200px;
+        }
+
+        .fila1,
+        .fila2 {
+            display: flex;
+            width: 100%;
+        }
+
+        .fila1>div,
+        {
+        display: flex;
+        align-items: flex-start;
+        /* Alineación arriba */
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 10px;
+        /* Añadir espacio arriba */
+        }
+
+        .fila1>div {
+            width: 33.33%;
+            height: 400px;
+        }
+
+        .fila2>div {
+            width: 50%;
+            height: 400px;
+        }
+
+        #entrada,
+        #resultado,
+        #estado {
+            background: lightgray;
+            padding-left: 10px;
+            padding-top: 20px;
+            /* Añade espacio arriba */
+            font-size: 18px;
+            /* Aumenta el tamaño de la letra */
+        }
+
+        #entrada {
+            background: gray;
+        }
+
+        #encriptar {
+            background: blue;
+            cursor: pointer;
+            padding-top: 20px;
+            display: flex;
+            justify-content: ;
+            align-items: center;
+            height: 100%;
+            /* Asegura que ocupe toda la altura disponible */
+            flex-direction: column;
+        }
+
+        #resultado {
+            background: yellow;
+        }
+
+        #estado {
+            background: black;
+            color: white;
+        }
+
+        #extra {
+            background: lightblue;
+        }
+
+        #flecha {
+            display: none;
+            width: 120px;
+            height: 120px;
+        }
+
+        #encriptar span {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <div class="fila1">
+            <div id="entrada">
+                <strong>Dato de entrada:</strong><br>
+                <input type="text" id="clave">
+            </div>
+            <div id="encriptar" onmouseover="mostrarFlecha()" onmouseleave="ocultarFlecha()">
+                <span>Encriptar</span>
+                <img id="flecha" src="flecha.png" alt="Encriptar" onclick="enviarClave()">
+            </div>
+            <div id="resultado">
+                <strong>Resultado:</strong><br>
+                <span id="resultadoTexto"></span>
+            </div>
+        </div>
+        <div class="fila2">
+            <div id="estado">
+                <strong>Estado del requerimiento:</strong>
+            </div>
+            <div id="extra"></div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarFlecha() {
+            document.getElementById("flecha").style.display = "block";
+        }
+
+        function ocultarFlecha() {
+            document.getElementById("flecha").style.display = "none";
+        }
+
+        function enviarClave() {
+            let clave = document.getElementById("clave").value;
+            let resultadoTexto = document.getElementById("resultadoTexto");
+            let estadoDiv = document.getElementById("estado");
+
+            resultadoTexto.innerHTML = "Esperando respuesta...";
+            estadoDiv.innerHTML = "<strong>Estado del requerimiento:</strong>";
+
+            setTimeout(() => {
+                let xhr = new XMLHttpRequest();
+                xhr.open("POST", "procesar.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        resultadoTexto.innerHTML = xhr.responseText;
+                        estadoDiv.innerHTML = "<strong>Estado del requerimiento:</strong> success";
+                    }
+                };
+
+                xhr.send("clave=" + encodeURIComponent(clave));
+            }, 2000);
+        }
+    </script>
+
+</body>
+
+</html>
