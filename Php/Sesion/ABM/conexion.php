@@ -1,0 +1,18 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    header("Location: ../index.php");
+    exit;
+}
+$host = 'localhost';
+$dbname = 'abm_celulares';
+$username = 'root';
+$password = '';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Error al conectar a la base de datos: " . $e->getMessage());
+}
+?>
